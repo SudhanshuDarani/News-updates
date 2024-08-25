@@ -144,7 +144,7 @@ const HomePage = () => {
                         </Button>
                     </Box>
                 )}
-                <Box display={"flex"} justifyContent={"center"} gap={"2%"} flexWrap={"wrap"} width={"70%"} overflowY={"scroll"} mt={"25pt"}
+                <Box display={"flex"} justifyContent={"center"} gap={"2%"} flexWrap={"wrap"} width={"75%"} overflowY={"scroll"} mt={"25pt"}
                     sx={{
                         '&::-webkit-scrollbar': {
                             display: 'none',
@@ -152,14 +152,14 @@ const HomePage = () => {
                     }}
                 >
                     {newsData.length > 0 ? newsData.map((datas, index) => (
-                        <Card key={index} w={"15%"} height={"95%"} borderRadius={"10pt"}>
+                        <Card key={index} w={"25%"} height={"95%"} borderRadius={"10pt"}>
                             <CardBody>
                                 <Stack spacing='3'>
-                                    <Heading color={"#02256A"} fontSize={"30pt"}>{datas.titles}</Heading>
-                                    <Text>{datas.details} </Text>
+                                    <Heading color={"#02256A"} fontSize={"18pt"}>{datas.titles}</Heading>
+                                    <Text fontSize={"10pt"}>{datas.details} </Text>
                                 </Stack>
                             </CardBody>
-                            <CardFooter>
+                            <CardFooter mt={"-25pt"}>
                                 <ButtonGroup spacing='2'>
                                     <Button variant='solid' colorScheme='blue'
                                         onClick={() => { handleDelete(datas._id) }}>
